@@ -17,10 +17,14 @@ const guessNumber = function(variableinput, variableoutput) {
     const inputNumber = parseInt(input.value);
     if (myRandomNumber === inputNumber) {
       output.innerHTML = "¡HAS GANADO CAMPEONA!";
+    } else if (inputNumber < myRandomNumber && inputNumber > myRandomNumber - 3) {
+      output.innerHTML = "Caaasi.. pero demasiado bajo";
     } else if (inputNumber < myRandomNumber) {
-      output.innerHTML = "demasiado bajo";
+      output.innerHTML = "Demasiado bajo";
+    } else if (inputNumber > myRandomNumber && inputNumber < myRandomNumber + 3) {
+      output.innerHTML = "Caaasi.. pero demasiado alto";
     } else if (inputNumber > myRandomNumber) {
-      output.innerHTML = "demasiado alto";
+      output.innerHTML = "Demasiado alto";
     }
   }
   btn.addEventListener("click", compareNumbers);
@@ -28,10 +32,15 @@ const guessNumber = function(variableinput, variableoutput) {
 
 guessNumber(".input", ".content");
 
-let counterNummber = 0;
+let counterNumber = 0;
 function countTimes() {
-  counterNummber++;
+  counterNumber++;
   const counter = document.querySelector(".counter");
-  counter.innerHTML = `${counterNummber}`;
+  counter.innerHTML = `${counterNumber}`;
+  if (counterNumber > 4 && counterNumber != 6) {
+    counter.innerHTML = counter.innerHTML + "<small class='small'>¿Todavía no sabes cúal es?</small>";
+  } else if (counterNumber === 6) {
+    counter.innerHTML = counter.innerHTML + "<small class='small'>Ánimo, a la séptima va la vencida</small>";
+  }
 }
 btn.addEventListener("click", countTimes);

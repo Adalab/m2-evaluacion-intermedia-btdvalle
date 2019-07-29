@@ -2,8 +2,13 @@
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.body {
+  background: lightgray;
+}
+
 .title {
   text-align: center;
+  margin: 120px 0 20px 0;
 }
 
 .subtitle {
@@ -16,12 +21,28 @@
   align-items: center;
 }
 
+.input {
+  width: 30vw;
+  height: 35px;
+  text-align: center;
+  margin: 20px;
+  border: none;
+}
+
+.btn {
+  width: 30vw;
+  height: 20px;
+
+  background: white;
+  border: none;
+}
+
 .content {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 60vw;
-  height: 10vh;
+  height: 50px;
   margin: 50px;
   border: solid blue 2px;
   color: blue;
@@ -34,10 +55,15 @@
   right: 0;
   display: flex;
   justify-content: center;
+  flex-flow: row wrap;
   align-items: center;
-  width: 10vw;
-  height: 10vh;
+  width: 20vw;
+  height: 15vh;
   margin: 20px;
   font-size: 50px;
   color: red;
+}
+
+.small {
+  font-size: 15px;
 }
