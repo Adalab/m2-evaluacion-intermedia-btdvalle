@@ -1,5 +1,13 @@
+* {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .title {
   text-align: center;
+}
+
+.subtitle {
+  margin: 20px;
 }
 
 .form {
@@ -12,24 +20,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 60vw;
+  height: 10vh;
+  margin: 50px;
   border: solid blue 2px;
   color: blue;
-  width: 60vw;
-  height: 20vh;
-  margin: 50px;
+  font-size: 20px;
 }
 
 .counter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   right: 0;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 10vw;
   height: 10vh;
   margin: 20px;
-  text-align: center;
+  font-size: 50px;
   color: red;
 }
