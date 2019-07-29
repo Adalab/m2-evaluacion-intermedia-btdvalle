@@ -1,0 +1,35 @@
+.title {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid blue 2px;
+  color: blue;
+  width: 60vw;
+  height: 20vh;
+  margin: 50px;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 10vw;
+  height: 10vh;
+  margin: 20px;
+  text-align: center;
+  color: red;
+}
